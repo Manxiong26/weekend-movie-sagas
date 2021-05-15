@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './MovieList.css'
+import MovieForm from '../MovieForm/MovieForm'
 
 function MovieList() {
 
@@ -18,8 +19,9 @@ function MovieList() {
                 {movies.map(movie => {
                     return (
                         <div key={movie.id} >
-                            <h3>{movie.title}</h3>
-                            <img src={movie.poster} alt={movie.title}/>
+                            <MovieForm movie={movie}/>
+                            {/* <h3>{movie.title}</h3>
+                            <img src={movie.poster} alt={movie.title}/> */}
                         </div>
                     );
                 })}

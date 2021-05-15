@@ -4,7 +4,7 @@
 [] When a movie poster is clicked, a user should be brought to the `/details` 
     view for that movie.
 
-[] Have a way to get to the Add Movie Page
+[x] Have a way to get to the Add Movie Page
 
 
 ### Details Page
@@ -34,8 +34,7 @@ The Add Movie page should have the buttons:
         [ ] Research cards for your movie posters on the list page
         [ ] Research grids for your movie posters on the Movie List page
         [ ] Commit your code frequently! You should have at 15+ commits on a project
-            of this size. 
- **Questions**               
+            of this size.              
         [ ] Use branches to help break down your features. 
     [ ] Comment your code.
     [ ] Update this README to include a description of the project in your own 

@@ -12,15 +12,14 @@
 [] The details page should have a `Back to List` button, which should bring the 
     user to the Home/List Page
         [] make a GET request for a specific movie
+        **haven't gotten the pressing on the movie to just show that one detail yet**
 
 ### Add Movie Page
 
 This should show:
-    [] an input field (for the movie title)
-**Questions**    
+    [] an input field (for the movie title) 
     [] an input field (for the movie poster image URL)) 
     [] a textarea (for the movie description) 
-**Questions**    
     [] a dropdown (for the genres) 
 **Base functionality does not require the movie details to load correctly after refresh of the browser**
 

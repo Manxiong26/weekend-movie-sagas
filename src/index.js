@@ -10,11 +10,13 @@ import logger from 'redux-logger';
 import createSagaMiddleware from 'redux-saga';
 import { takeEvery, put } from 'redux-saga/effects';
 import axios from 'axios';
+import { response } from 'express';
 
 // Create the rootSaga generator function
 function* rootSaga() {
     yield takeEvery('FETCH_MOVIES', fetchAllMovies);
     yield takeEvery('GET_DETAIL', getDetail);
+    yield takeEvery('SET_GENRE', getGenre);
 }
 
 function* fetchAllMovies() {
@@ -27,17 +29,26 @@ function* fetchAllMovies() {
     } catch {
         console.log('get all error');
     }
-        
+
 }
 
 function* getDetail(action) {
-    console.log('fecthing details by id');
-    try{
+    console.log('fetching details by id');
+    try {
         const detail = yield axios.get(`/api/movie`, action.payload)
         yield put({ type: 'SET_DETAIL', payload: detail.data })
-    } catch(error){
+    } catch (error) {
         console.log('Error with detail request', error);
-        
+    }
+}
+
+function* getGenre() {
+    console.log('Fetching genre');
+    try {
+        const genre = yield axios.get('api/genre')
+        yield put({ type: 'SET_GENRE', payload: genre.data })
+    } catch (error) {
+        console.log('Error with genre fetching request', error);
     }
 }
 

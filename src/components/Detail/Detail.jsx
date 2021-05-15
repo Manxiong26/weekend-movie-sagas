@@ -1,25 +1,19 @@
 import { useSelector } from 'react-redux';
-import {HashRouter as Router, Route, Link} from 'react-router-dom';
+import {HashRouter as Router, Link} from 'react-router-dom';
 
 
 function Detail(){
 
     const movies = useSelector(store => store.movies);
-
     return(
         <main>
             <h1>MovieList</h1>
             <section className="details">
-                {movies.map(movie => {
+                {movies.map(movies => {
                     return (
-                        <div>
-                            <Router>
-                                <nav>
-                                    <p><Link to="/">Home</Link></p>
-                                </nav>
-                            </Router>
-                            <h3>{movie.description}</h3>
-                            <img src={movie.poster} alt={movie.description}/>
+                        <div key={movies.id}>
+                            <h3>{movies.description}</h3>
+                            <img src={movies.poster} alt={movies.description}/>
                         </div>
                     );
                 })}

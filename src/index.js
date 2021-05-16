@@ -15,6 +15,8 @@ import axios from 'axios';
 function* rootSaga() {
     yield takeEvery('FETCH_MOVIES', fetchAllMovies);
     yield takeEvery('GET_DETAIL', getDetail);
+    yield takeEvery('ADD_GENRES', getGenre);
+    yield takeEvery('ADD_MOVIE', addMovie);
 }
 
 function* fetchAllMovies() {
@@ -23,21 +25,40 @@ function* fetchAllMovies() {
         const movies = yield axios.get('/api/movie');
         console.log('get all:', movies.data);
         yield put({ type: 'SET_MOVIES', payload: movies.data });
-
     } catch {
         console.log('get all error');
     }
-        
+
 }
 
 function* getDetail(action) {
-    console.log('fecthing details by id');
-    try{
-        const detail = yield axios.get(`/api/movie`, action.payload)
+    console.log('fetching details by id');
+    try {
+        const detail = yield axios.get(`/api/movie/${action.payload}`)
         yield put({ type: 'SET_DETAIL', payload: detail.data })
-    } catch(error){
+    } catch (error) {
         console.log('Error with detail request', error);
-        
+    }
+}
+
+
+function* getGenre(action) {
+    console.log('Fetching genre');
+    try {
+        const genre = yield axios.get('/api/genre/')
+        yield put({ type: 'SET_GENRES', payload: genre.data })
+    } catch (error) {
+        console.log('Error with genre fetching request', error);
+    }
+}
+
+function* addMovie(action) {
+    console.log('Adding Movie');
+    try {
+        yield axios.post('/api/movie/', action.payload);
+        yield put({ type: 'FETCH_MOVIES' })
+    } catch (error) {
+        console.log('Error adding movie', error);
     }
 }
 
@@ -65,13 +86,14 @@ const genres = (state = [], action) => {
 }
 
 const detail = (state = [], action) => {
-    switch (action.type){
+    switch (action.type) {
         case 'SET_DETAIL':
             return action.payload;
-            default:
-                return state;
+        default:
+            return state;
     }
 }
+
 
 // Create one store that all components can use
 const storeInstance = createStore(

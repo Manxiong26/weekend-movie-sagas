@@ -1,7 +1,4 @@
-[] Start by taking inventory of the existing code. 
-    -Part of the work for setting up sagas has been done for you.
-
-[] When a movie poster is clicked, a user should be brought to the `/details` 
+[x] When a movie poster is clicked, a user should be brought to the `/details` 
     view for that movie.
 
 [x] Have a way to get to the Add Movie Page
@@ -9,23 +6,23 @@
 
 ### Details Page
 
-[] The details page should have a `Back to List` button, which should bring the 
+[x] The details page should have a `Back to List` button, which should bring the 
     user to the Home/List Page
-        [] make a GET request for a specific movie
+        [x] make a GET request for a specific movie
         **haven't gotten the pressing on the movie to just show that one detail yet**
 
 ### Add Movie Page
 
 This should show:
-    [] an input field (for the movie title) 
-    [] an input field (for the movie poster image URL)) 
-    [] a textarea (for the movie description) 
-    [] a dropdown (for the genres) 
+    [x] an input field (for the movie title) 
+    [x] an input field (for the movie poster image URL)) 
+    [x] a textarea (for the movie description) 
+    [x] a dropdown (for the genres) 
 **Base functionality does not require the movie details to load correctly after refresh of the browser**
 
 The Add Movie page should have the buttons:
-    [] `Cancel` button, which should bring the user to the Home/List Page
-    [] `Save` button, which should update the title and description in the 
+    [x] `Cancel` button, which should bring the user to the Home/List Page
+    [x] `Save` button, which should update the title and description in the 
         database and bring the user to the Home/List Page (which now has the new movie)
 **Base functionality does not require being able to select more than one genre for a new movie**
 

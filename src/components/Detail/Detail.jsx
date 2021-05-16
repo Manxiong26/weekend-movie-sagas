@@ -1,23 +1,44 @@
 import { useSelector, useDispatch } from 'react-redux';
-import {HashRouter as Router, Link} from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
+// material ui import
+import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
 
+//using material ui 
+const useStyles = makeStyles((theme) => ({
+    root: {
+        '& > *': {
+            margin: theme.spacing(1),
+        },
+    },
+}));
 
-function Detail(){
-
-
+function Detail() {
+    const history = useHistory();
+    const classes = useStyles();
+    //calling the detail store 
     const detail = useSelector(store => store.detail);
-    const genre = useSelector( store => store.genres);
 
+    //handler to take users back to home page
+    const home = () => {
+        console.log('going home');
+        history.push('/');
+    }
 
-    return(
-        <main>
+    return (
+        <main className={classes.root}>
+            <br></br>
+            <Button onClick={home} variant="contained">Go Home</Button>
             <h1>MovieList</h1>
             <section className="details">
                 <h4>
+                    {/* calling genre name by using the detail store. */}
                     Genres: {detail.name}
                 </h4>
-                        <h3>{detail.description}</h3>
-                        <img src={detail.poster} alt={detail.description} />
+                {/* calling details using the detail store */}
+                <h3>{detail.description}</h3>
+                <img src={detail.poster} alt={detail.description} />
+
             </section>
         </main>
     )

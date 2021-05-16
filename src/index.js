@@ -30,7 +30,7 @@ function* fetchAllMovies() {
     }
 
 }
-
+// get the detail from movies
 function* getDetail(action) {
     console.log('fetching details by id');
     try {
@@ -41,7 +41,7 @@ function* getDetail(action) {
     }
 }
 
-
+// get the genre from the genres table
 function* getGenre(action) {
     console.log('Fetching genre');
     try {
@@ -51,7 +51,7 @@ function* getGenre(action) {
         console.log('Error with genre fetching request', error);
     }
 }
-
+//post movies that are added 
 function* addMovie(action) {
     console.log('Adding Movie');
     try {
@@ -85,6 +85,7 @@ const genres = (state = [], action) => {
     }
 }
 
+// Used to store the detail
 const detail = (state = [], action) => {
     switch (action.type) {
         case 'SET_DETAIL':
@@ -112,7 +113,7 @@ sagaMiddleware.run(rootSaga);
 ReactDOM.render(
     <React.StrictMode>
         <Provider store={storeInstance}>
-        <App />
+            <App />
         </Provider>
     </React.StrictMode>,
     document.getElementById('root')

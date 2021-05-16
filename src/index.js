@@ -41,10 +41,11 @@ function* getDetail(action) {
     }
 }
 
+
 function* getGenre(action) {
     console.log('Fetching genre');
     try {
-        const genre = yield axios.get('/api/genre/', action.payload)
+        const genre = yield axios.get('/api/genre/')
         yield put({ type: 'SET_GENRES', payload: genre.data })
     } catch (error) {
         console.log('Error with genre fetching request', error);
@@ -92,6 +93,7 @@ const detail = (state = [], action) => {
             return state;
     }
 }
+
 
 // Create one store that all components can use
 const storeInstance = createStore(

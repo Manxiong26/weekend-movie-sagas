@@ -16,6 +16,26 @@ router.get('/', (req, res) => {
 
 });
 
+// Route to specific movie
+router.get('/:id', (req, res) => {
+  let id = req.params.id;
+  console.log('Id of chosen movie', id);
+  // Add query to get all genres
+  let sqlText = `
+      SELECT title, name, description, poster, genre_id, genres.name FROM movies_genres
+      JOIN movies ON movies.id = movies_genres.movie_id
+      JOIN genres ON genres.id = movies_genres.genre_id
+      WHERE movies.id = $1;`;
+  pool.query(sqlText, [id])
+  .then((result) => {
+    console.log(result.rows[0])
+    res.send(result.rows[0]);
+  }).catch((error) => {
+    console.log('Error GET genre of chosen movie', error)
+    res.sendStatus(500);
+  });
+})
+
 router.post('/', (req, res) => {
   console.log(req.body);
   // RETURNING "id" will give us back the id of the created movie

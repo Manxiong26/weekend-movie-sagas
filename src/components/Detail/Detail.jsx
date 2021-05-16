@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 // material ui import
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import './Detail.css'
 
 //using material ui 
 const useStyles = makeStyles((theme) => ({
@@ -24,22 +25,30 @@ function Detail() {
         console.log('going home');
         history.push('/');
     }
+    const back = () => {
+        console.log('going home');
+        history.push('/MovieList');
+    }
 
     return (
         <main className={classes.root}>
             <br></br>
             <Button onClick={home} variant="contained">Go Home</Button>
-            <h1>Movie Details</h1>
-            <section className="details">
+            <Button onClick={back} variant="contained">Go Back</Button>
+            <h1 className="details">Movie Details</h1>
+            <section >
                 <h2>
                     {/* calling genre name by using the detail store. */}
                     Genres: {detail.name}
                 </h2>
                 <h2>Description:</h2>
-                {/* calling details using the detail store */}
-                <h3>{detail.description}</h3>
+                <div className="detailSec">
                 <img src={detail.poster} alt={detail.description} />
-
+                <br/>
+                {/* calling details using the detail store */}
+                
+                <h3 className="description" >{detail.description}</h3>
+                </div>
             </section>
         </main>
     )

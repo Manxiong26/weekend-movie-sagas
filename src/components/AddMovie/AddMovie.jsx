@@ -45,11 +45,11 @@ function AddMovie() {
         //dispatched the addMovie saga 
         dispatch({ type: 'ADD_MOVIE', payload: {title: title, poster: poster, description: description, genre_id: genre }})
         clearFields();
+        history.push('/MovieList')
     };
     //the handler to go back to home page
     const goBack = (event) => {
         event.preventDefault();
-        
         history.push('/');
     }
 
@@ -101,11 +101,10 @@ function AddMovie() {
                 </select>
                 <br/>
                 <Button type="submit" variant="contained">Save Move</Button>
-                
+                {/* button to go back to home page */}
+                <Button onClick={goBack} variant="contained">Cancel</Button>
         </form>
-        {/* button to go back to home page */}
-        <p></p><Button onClick={goBack} variant="contained">Cancel</Button>
-       
+                
     </section>
     </>
     )

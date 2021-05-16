@@ -1,0 +1,16 @@
+.details{
+    text-shadow: 5px 10px 10px blue;
+    font-size: 100px;
+}
+
+.detailSec{
+    display: inline-flex;
+}
+
+.description{
+    word-wrap: break-word;
+    width: 600px;
+    border: 15px solid black;
+    margin: 20px;
+    box-shadow: 10px 10px 20px blue;
+}

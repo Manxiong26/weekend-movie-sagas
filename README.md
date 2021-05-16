@@ -1,9 +1,15 @@
 # Project Name
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+An web app that shows a list of movies with titles and a poster of the movie. When the picture is clicked it will show the detail of the movie with it's genre. Users can also add new movies to the list when click on the add movie button. When you click cancel it will take you back to the home page. 
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+Problems I came across was getting the genres store to map correctly. After a while I was able realize that I did not need to use .map and to just call it without .map.
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+Home Page
+
+![Select Home Page](Pictures/ScreeShot.png)
+
+Movie List Page
+
+![Select Movie List Page](Pictures/ScreenShot2.png)

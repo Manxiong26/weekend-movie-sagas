@@ -8,7 +8,7 @@ Problems I came across was getting the genres store to map correctly. After a wh
 
 Home Page
 
-![Select Home Page](Pictures/ScreeShot.png)
+![Select Home Page](Pictures/ScreenShot.png)
 
 Movie List Page
 

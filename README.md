@@ -16,6 +16,8 @@ Movie List Page
 
 Details Page
 
+![Select Detail Page](Pictures/Details.png)
+
 Add Movie Page
 
 ![Select Add Move Page](Pictures/Add.png)

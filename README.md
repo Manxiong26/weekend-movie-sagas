@@ -13,3 +13,7 @@ Home Page
 Movie List Page
 
 ![Select Movie List Page](Pictures/ScreenShot2.png)
+
+Add Movie Page
+
+![Select Add Move Page](Pictures/ScreenShot3.png)

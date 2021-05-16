@@ -1,6 +1,6 @@
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-
+import './MovieForm.css'
 
 function MovieForm(props) {
     // propping the movie store from the MovieList component
@@ -13,9 +13,10 @@ function MovieForm(props) {
         dispatch({ type: 'GET_DETAIL', payload: movie.id })
         history.push('/detail');
     }
+    
 
     return (
-        <form>
+       <form>
             <div className="list">
                 {/* calling the movie title and poster to show in the home page */}
                 <h3>{movie.title}</h3>

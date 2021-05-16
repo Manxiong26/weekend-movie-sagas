@@ -10,9 +10,6 @@ function App() {
       <h1>The Movies Saga!</h1>
       {/* Router to route to each page component */}
       <Router>
-        <nav>
-          <p><Link to="/AddMovie">Add Movie</Link></p>
-        </nav>
         <Route path="/" exact>
           <MovieList />
         </Route>

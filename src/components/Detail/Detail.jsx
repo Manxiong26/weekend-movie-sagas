@@ -29,7 +29,7 @@ function Detail() {
         <main className={classes.root}>
             <br></br>
             <Button onClick={home} variant="contained">Go Home</Button>
-            <h1>MovieList</h1>
+            <h1>Movie Details</h1>
             <section className="details">
                 <h4>
                     {/* calling genre name by using the detail store. */}

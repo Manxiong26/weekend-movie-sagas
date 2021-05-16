@@ -3,14 +3,16 @@ import './App.css';
 import MovieList from '../MovieList/MovieList'
 import Detail from '../Detail/Detail'
 import AddMovie from '../AddMovie/AddMovie'
-
+import Home from '../Home/Home'
 function App() {
   return (
     <div className="App">
-      <h1>The Movies Saga!</h1>
       {/* Router to route to each page component */}
       <Router>
         <Route path="/" exact>
+          <Home />
+        </Route>
+        <Route path="/MovieList" exact>
           <MovieList />
         </Route>
         <Route path="/AddMovie" exact>

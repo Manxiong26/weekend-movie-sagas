@@ -3,9 +3,21 @@ import { useDispatch, useSelector } from 'react-redux';
 import './MovieList.css'
 import MovieForm from '../MovieForm/MovieForm'
 import { useHistory } from 'react-router-dom';
+//importing material ui
+import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+        '& > *': {
+            margin: theme.spacing(1),
+        },
+    },
+}));
 
 function MovieList() {
 
+    const classes = useStyles();
     const history = useHistory();
     const dispatch = useDispatch();
     //calling the movie store
@@ -22,9 +34,9 @@ function MovieList() {
     }
 
     return (
-        <main>
-            <button onClick={addMovies}>Add New Movie</button>
-            <h1>MovieList</h1>
+        <main className={classes.root}>
+            <h1 className="ListTitle">MovieList</h1>
+            <Button onClick={addMovies} variant="contained">Add New Movie</Button>
             <section className="movies">
                 {/* mapping the movies array */}
                 {movies.map(movie => {

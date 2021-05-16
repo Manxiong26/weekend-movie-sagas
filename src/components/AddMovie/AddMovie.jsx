@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 //importing material ui
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import './AddMovie.css'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -53,7 +54,7 @@ function AddMovie() {
     return (
         <section>
             {/* on submit use handleSubmit for this form */}
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className={classes.root}>
                 {/* inputs to collect the information from users */}
                 <input
                     required
@@ -77,7 +78,9 @@ function AddMovie() {
                     value={description}
                     onChange={(event) => setDescription(event.target.value)} />
 
+                
                 <select onChange={(event) => setGenre(event.target.value)}>
+                <option> Category</option>
                     {genres.map(item => {
                         return <option key={item.id} value={item.id}>{item.name} </option>
                     })}

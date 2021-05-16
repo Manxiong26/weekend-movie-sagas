@@ -31,10 +31,11 @@ function Detail() {
             <Button onClick={home} variant="contained">Go Home</Button>
             <h1>Movie Details</h1>
             <section className="details">
-                <h4>
+                <h2>
                     {/* calling genre name by using the detail store. */}
                     Genres: {detail.name}
-                </h4>
+                </h2>
+                <h2>Description:</h2>
                 {/* calling details using the detail store */}
                 <h3>{detail.description}</h3>
                 <img src={detail.poster} alt={detail.description} />

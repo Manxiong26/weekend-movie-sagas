@@ -1,0 +1,16 @@
+input, select{
+    padding:25px;
+    border:0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+
+section{
+    width: 55%;
+    margin-top: 100px;
+    margin-right: 25%;
+    margin-left: 25%;
+}
+
+form{
+    border:10px solid #000
+}

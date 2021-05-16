@@ -35,7 +35,7 @@ function MovieList() {
 
     return (
         <main className={classes.root}>
-            <h1>MovieList</h1>
+            <h1 className="ListTitle">MovieList</h1>
             <Button onClick={addMovies} variant="contained">Add New Movie</Button>
             <section className="movies">
                 {/* mapping the movies array */}

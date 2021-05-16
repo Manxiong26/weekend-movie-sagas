@@ -26,9 +26,8 @@ const goList = (event) => {
         <div className={classes.root}>
             <img src="http://fc05.deviantart.net/fs70/f/2013/021/5/a/miku_welcome_sign__free_to_use__by_pinkbunnii-d5s9380.gif"/>
             <br/>
-            <Button onClick={goList} variant="contained">Movie List</Button>
             <h1 className="title">The Movies Saga!</h1>
-            
+            <Button onClick={goList} variant="contained">Movie List</Button>
         </div>
     )
 }

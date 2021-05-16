@@ -12,8 +12,11 @@ Home Page
 
 Movie List Page
 
-![Select Movie List Page](Pictures/ScreenShot2.png)
+![Select Movie List Page](Pictures/MovieList.png)
+
+Details Page
 
 Add Movie Page
 
-![Select Add Move Page](Pictures/ScreenShot3.png)
+![Select Add Move Page](Pictures/Add.png)
+

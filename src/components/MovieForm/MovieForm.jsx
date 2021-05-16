@@ -19,7 +19,7 @@ function MovieForm(props) {
        <form>
             <div className="list">
                 {/* calling the movie title and poster to show in the home page */}
-                <h3 className="poster">{movie.title}</h3>
+                <h3 className="name">{movie.title}</h3>
                 <img className="poster" onClick={handleEdit} src={movie.poster} alt={movie.title} />
             </div>
         </form>

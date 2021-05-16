@@ -1,6 +1,6 @@
 .poster{
     
-    -moz-box-shadow:    10px 15px 15px rgb(119, 115, 115);
-    -webkit-box-shadow: 10px 15px 15px rgb(119, 115, 115);
-    box-shadow:         10px 15px 15px rgb(119, 115, 115);
+    -moz-box-shadow:    10px 15px 15px blue;
+    -webkit-box-shadow: 10px 15px 15px blue;
+    box-shadow:         10px 15px 15px blue;
 }

@@ -10,19 +10,4 @@ MovieList
 
 ![Movie List](Pictures/MovieList.gif)
 
-Home Page
-
-![Select Home Page](Pictures/ScreenShot.png)
-
-Movie List Page
-
-![Select Movie List Page](Pictures/MovieList.png)
-
-Details Page
-
-![Select Detail Page](Pictures/Details.png)
-
-Add Movie Page
-
-![Select Add Move Page](Pictures/Add.png)
 

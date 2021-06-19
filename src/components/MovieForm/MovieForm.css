@@ -3,4 +3,9 @@
     -moz-box-shadow:    10px 15px 15px blue;
     -webkit-box-shadow: 10px 15px 15px blue;
     box-shadow:         10px 15px 15px blue;
+    float: center;
+    width:  200px;
+    height: 300px;
+    object-fit: cover;
+
 }

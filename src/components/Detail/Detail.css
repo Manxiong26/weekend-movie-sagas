@@ -2,9 +2,15 @@
     text-shadow: 5px 10px 10px blue;
     font-size: 100px;
 }
-
+.pic{
+    float: center;
+    width:  200px;
+    height: 300px;
+    object-fit: cover;
+}
 .detailSec{
     display: inline-flex;
+    
 }
 
 .description{

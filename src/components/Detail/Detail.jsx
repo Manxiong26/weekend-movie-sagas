@@ -43,7 +43,7 @@ function Detail() {
                 </h2>
                 <h2>Description:</h2>
                 <div className="detailSec">
-                <img src={detail.poster} alt={detail.description} />
+                <img className="pic" src={detail.poster} alt={detail.description} />
                 <br/>
                 {/* calling details using the detail store */}
                 

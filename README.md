@@ -6,6 +6,10 @@ An web app that shows a list of movies with titles and a poster of the movie. Wh
 
 Problems I came across was getting the genres store to map correctly. After a while I was able realize that I did not need to use .map and to just call it without .map.
 
+MovieList 
+
+![Movie List](Pictures/MovieList.gif)
+
 Home Page
 
 ![Select Home Page](Pictures/ScreenShot.png)
